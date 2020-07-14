@@ -17,7 +17,7 @@ if(empty($_POST["Pass"]))
 else
 {
     $userpassword = $_POST["Pass"];
-    print "你的帳號為".$userpassword."</br>" ;
+    print "你的密碼為".$userpassword."</br>" ;
 }
 
 if (empty($_POST["choicephone"]))
