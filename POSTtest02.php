@@ -1,36 +1,44 @@
 <?php
 //post
-if ($_POST["User"] == NULL )
+if (empty($_POST["User"]))
 {
-  print "請輸入帳號";
+  print "請輸入帳號</br>";
 }
-if($_POST["Pass"] == NULL)
+else
 {
-    print "請輸入密碼";
+    $username = $_POST["User"];
+    print "你的帳號為".$username."</br>" ;
 }
 
-$username = $_POST["User"];
-$userpassword = $_POST["Pass"];
+if(empty($_POST["Pass"]))
+{
+    print "請輸入密碼</br>";
+}
+else
+{
+    $userpassword = $_POST["Pass"];
+    print "你的帳號為".$userpassword."</br>" ;
+}
+
+if (empty($_POST["choicephone"]))
+{
+    $userphone = "iphone";
+}
+else
+{
 $userphone = $_POST["choicephone"];
-
+}
 switch($userphone){
     case "iphone":
-        print "你的手機是IPHONE"; 
+        print "你的手機是IPHONE</br>"; 
     break;
      case "htc":
-        print "你的手機是HTC";
+        print "你的手機是HTC</br>";
      break;
     case "sony":
-        print "你的手機是SONY";
+        print "你的手機是SONY</br>";
     break;
 
 }
-if ($username == "hello" and $userpassword == "0000"){
 
-    print "yourName is $username</br>";
-    print "yourPassword is $userpassword<br>";
-}
-else{
-    print "Login fault";
-}
 ?>
